@@ -174,10 +174,12 @@ var bindTaskEvents=function(taskListItem,checkBoxEventHandler){
     if(checkBoxEventHandler == taskCompleted) {
         taskListItem.classList.remove("complated-task-item")
         taskListItem.classList.add("incomplete-task-item")
+        taskListItem.children[1].classList.remove("complated-task-item--line-through")
             
     }else if(checkBoxEventHandler == taskIncomplete){
             taskListItem.classList.remove("incomplete-task-item")
             taskListItem.classList.add("complated-task-item")
+            taskListItem.children[1].classList.add("complated-task-item--line-through")
     }
     
 
